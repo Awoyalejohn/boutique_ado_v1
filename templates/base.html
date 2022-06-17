@@ -74,9 +74,9 @@
                   <div class="dropdown-menu border-0" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
-                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                        <a href="" class="dropdown-item">Product Management</a>
                       {% endif %}
-                      <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                      <a href="" class="dropdown-item">My Profile</a>
                       <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                       {% else %}
                         <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -115,8 +115,7 @@
             <h4 class="logo-font my-1">Free delivery on orders over ${{ free_shipping_threshold }}!</h4>                
         </div>            
     </div>
-</header>
-    </header>
+
 
     {% if messages %}
       <div class="message-container"></div>
@@ -126,6 +125,7 @@
     {% endblock %}
 
     {% block content %}
+    <!-- Main contents-->
     {% endblock %}
 
     {% block postloadjs %}
